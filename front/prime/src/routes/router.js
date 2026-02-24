@@ -17,6 +17,10 @@ const router = createBrowserRouter([
         path: "recruiting",
         element: <Recruiting />,
       },
+      {
+        path: "cicd-test",
+        element: 
+      }
     ],
   },
   // {
