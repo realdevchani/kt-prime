@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import HeaderAndFooterLayout from "pages/layout/HeaderAndFooterLayout";
 import Home from "pages/Home";
 import Recruiting from "pages/Recruiting";
+import Test from "pages/Test";
 
 
 const router = createBrowserRouter([
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: "cicd-test",
-        element: 
+        element: <Test />
       }
     ],
   },
