@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import HeaderAndFooterLayout from "pages/layout/HeaderAndFooterLayout";
 import Home from "pages/Home";
 import Recruiting from "pages/Recruiting";
-import Test from "pages/Test";
-
+import RecruitingCheck from "pages/RecruitingCheck";
+import Admin from "pages/Admin";
 
 const router = createBrowserRouter([
   {
@@ -19,15 +19,15 @@ const router = createBrowserRouter([
         element: <Recruiting />,
       },
       {
-        path: "cicd-test",
-        element: <Test />
+        path: "recruiting/check",
+        element: <RecruitingCheck />,
+      },
+      {
+        path: "admin",
+        element: <Admin />
       }
     ],
   },
-  // {
-  //   path: "*",
-  //   element: <NotFound />,
-  // },
 ]);
 
 export default router;

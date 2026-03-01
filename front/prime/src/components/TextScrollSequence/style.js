@@ -55,29 +55,34 @@ S.EnglishTitle = styled.h2`
   }
 `;
 
-S.SequenceText = styled.div`
+S.ItemList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  align-items: center;
+`;
+
+S.SequenceItem = styled.div`
   font-family: 'pretendard', sans-serif;
-  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+  font-size: clamp(1.25rem, 2.5vw + 0.5rem, 2rem);
   font-weight: 400;
   color: #333333;
   line-height: 1.6;
   text-align: center;
   width: 100%;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-  box-sizing: border-box;
   word-break: keep-all;
   overflow-wrap: break-word;
   letter-spacing: -0.02em;
 
   @media (max-width: 768px) {
-    font-size: clamp(1.25rem, 2.5vw + 0.5rem, 2rem);
+    font-size: clamp(1rem, 2vw + 0.4rem, 1.5rem);
     line-height: 1.5;
     padding: 0 0.5rem;
   }
 
   @media (max-width: 480px) {
-    font-size: clamp(1.125rem, 2vw + 0.5rem, 1.75rem);
+    font-size: clamp(0.9rem, 1.8vw + 0.4rem, 1.25rem);
     line-height: 1.4;
     padding: 0 0.25rem;
   }

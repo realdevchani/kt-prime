@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { gsap } from 'gsap';
 import S from './style';
 
 const Header = () => {
@@ -8,7 +7,6 @@ const Header = () => {
   const location = useLocation();
 
   const handleMenuClick = (sectionId) => {
-    // 현재 페이지가 Home이 아니면 Home으로 이동 후 스크롤
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
@@ -40,7 +38,7 @@ const Header = () => {
   };
 
   const handleRecruitingClick = () => {
-    navigate('/recruiting');
+    navigate('/recruiting/check');
   };
 
   return (
@@ -57,27 +55,27 @@ const Header = () => {
           <S.NavList>
             <S.NavItem>
               <S.NavLink onClick={() => handleMenuClick('read')}>
-                Management
+                경영이념
               </S.NavLink>
             </S.NavItem>
             <S.NavItem>
               <S.NavLink onClick={() => handleMenuClick('company-history')}>
-                History
+                회사연혁
               </S.NavLink>
             </S.NavItem>
             <S.NavItem>
               <S.NavLink onClick={() => handleMenuClick('core-value')}>
-                Value
+                핵심가치
               </S.NavLink>
             </S.NavItem>
             <S.NavItem>
               <S.NavLink onClick={() => handleMenuClick('contact')}>
-                Contact
+                오시는길
               </S.NavLink>
             </S.NavItem>
             <S.NavItem>
               <S.NavLink onClick={handleRecruitingClick}>
-                Recruiting
+                채용
               </S.NavLink>
             </S.NavItem>
           </S.NavList>

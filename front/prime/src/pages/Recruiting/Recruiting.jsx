@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import S from './style';
 
 const Recruiting = () => {
+  const location = useLocation();
+  const emailFromCheck = location.state?.email || '';
   const [formData, setFormData] = useState({
     // 기본 정보
     profileImage: null,
     name: '',
-    email: '',
-    emailConfirm: '',
+    email: emailFromCheck,
+    emailConfirm: emailFromCheck,
     phone: '',
     birthDate: '',
     address: '',
